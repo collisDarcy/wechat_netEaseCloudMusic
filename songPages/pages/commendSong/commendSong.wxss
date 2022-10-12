@@ -1,0 +1,95 @@
+.container{
+    height: 100%;
+    background-image: linear-gradient(to right,#9933FF,#ffebff);
+}
+.header{
+    position: relative;
+    width: 100%;
+    height: 360rpx;
+}
+.header image{
+    width: 100%;
+    height: 100%;
+}
+.header .date{
+    position: absolute;
+    right: 63rpx;
+    bottom: 0;
+    font-size: 27rpx;
+    color:#000000;
+}
+
+.listHeader{
+    position: relative;
+    top:2rpx;
+    padding: 0 20rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    vertical-align: middle;
+    border-radius: 20rpx;
+    background-color:transparent;
+}
+
+.listHeader image{
+    float: right;
+    width: 80rpx;
+    height: 80rpx;
+    margin-left: 22rpx;
+    border-radius: 50%;
+    box-shadow: 0 0 20rpx #9933FF;
+}
+
+.listHeader .changeMore{
+    float: right;
+}
+/* 歌单区域 */
+.listScroll{
+    height: calc(100vh - 440rpx);
+}
+.scrollItem{
+    position: relative;
+    display: flex;
+}
+.clickItem{
+    background-color:#bf9af5cf;
+    opacity: .8;
+}
+.scrollItem image{
+    width: 152rpx;
+    height: 152rpx;
+    margin-top: 26rpx;
+    margin-left: 32rpx;
+    border-radius: 15rpx;
+}
+.musicInfo{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20rpx;
+}
+.musicInfo text{
+    height: 40rpx;
+    line-height: 40rpx;
+    padding-top: 30rpx;
+    font-size: 34rpx;
+    max-width: 520rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.musicInfo .musicName{
+    font-weight: 500;
+}
+.musicInfo .authorName{
+    font-size: 27rpx;
+}
+.scrollItem .iconfont{
+    position: absolute;
+    width: 80rpx;
+    height: 80rpx;
+    top:52rpx;
+    right: -15rpx;
+    color: #524848;
+}
+.scrollItem .openMusic{
+    margin-right: 84rpx;
+}

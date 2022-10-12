@@ -1,0 +1,197 @@
+.container{
+    position: relative;
+    height: 100%;
+}
+.header{
+    display: flex;
+    height: 60rpx;
+    line-height: 60rpx;
+    padding: 10rpx;
+    justify-content: space-between;
+}
+.header text:first-child{
+    margin-left: 30rpx;
+    font-size: 39rpx;
+    color:#9c8e8e;
+}
+.header .searchInput{
+    position: relative;
+    flex: 1;
+    background-color:#e8efed;
+    border-radius: 30rpx;
+    margin-left: 24rpx;
+}
+.header .quxiao{
+    position: absolute;
+    top: 0;
+    right: 30rpx;
+    z-index: 17;
+}
+.header .cancle{
+    width: 100rpx;
+    text-align: center;
+    color: #c8d4b1;
+}
+.header .searchInput .searchIcon{
+    position: absolute;
+    margin-left: 41rpx;
+}
+.searchInput input{
+    text-align: center;
+    height: 60rpx;
+}
+.placeholder{
+    color:grey;
+}
+/* 搜索内容展示区域 */
+.showSearchContent{
+    position: absolute;
+    width: 700rpx;
+    height: calc(100vh - 145rpx);
+    overflow: hidden;
+    left: 50%;
+    margin-left: -350rpx;
+    margin-top: 27rpx;
+    background-color: #75bb92;
+    opacity: .6;
+    z-index: 17;
+    border-radius: 20rpx;
+}
+.clickItem{
+    background-color:#bf9af5cf;
+    opacity: .8;
+}
+.searchContent{
+    display: flex;
+    justify-content: space-between;
+    height: 60rpx;
+    line-height: 64rpx;
+    font-size: 37rpx;
+    font-weight: 500;
+    padding-left: 21rpx;
+    border-bottom: 2rpx solid #b0baba;
+}
+.searchContent text:last-child{
+    font-size: 37rpx;
+    margin-right: 21rpx;
+}
+.searchItem{
+    display: flex;
+    justify-content: space-between;
+    height: 101rpx;
+    border-bottom: 2rpx solid #cacfd4;
+}
+.searchItem .songLeft{
+    display: flex;
+    flex-direction: column;
+}
+.songLeft .content{
+  font-size: 31rpx;
+  font-weight: 600;
+  padding-top: 13rpx;
+  padding-left: 21rpx;
+}
+.songLeft .songerContent{
+    padding-top: 7rpx;
+    padding-left: 21rpx;
+}
+.songLeft .originSong{
+   font-size: 28rpx;
+    background-color:#e1e8e7;
+}
+.songLeft .songer{
+    font-size: 27rpx;
+    padding-left: 12rpx;
+    color:#4c525a;
+}
+.songRight{
+    padding-top: 35rpx;
+}
+.songRight text:last-child{
+    padding-left: 97rpx;
+    margin-right: 21rpx;
+}
+.hot-history-content{
+    position: relative;
+    margin: 42rpx auto;
+}
+/* 搜索历史展示区域 */
+.historyContent{
+    display: flex;
+    flex-wrap: wrap;
+    width: 700rpx;
+    max-height: 164rpx;
+    margin-top: 10rpx;
+    margin: auto;
+    border-radius: 17rpx;
+    background-color: #e8efed;
+    overflow: hidden;
+}
+.historyContent .title{
+    font-size: 35rpx;
+    font-weight: 500;
+    height: 50rpx;
+    line-height: 50rpx;
+    color:#478438;
+}
+.historyContent .title .delete{
+    float: right;
+    padding-top: 7rpx;
+    padding-left: 49rpx;
+    font-size: 36rpx;
+}
+
+.history .historyItem{
+    height: 50rpx;
+    line-height: 50rpx;
+    font-size: 27rpx;
+    margin-top: 7rpx;
+    margin-left: 43rpx;
+    padding: 0 34rpx;
+    border-radius: 20rpx;
+    background:#c2cec9;
+}
+/* 热搜榜区域 */
+.hotContainer{
+    width: 700rpx;
+    padding-top: 42rpx;
+    margin:auto;
+    /* margin-left: -350rpx; */
+    border-radius: 20rpx;
+}
+.hotContainer .hotTop{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    font-size: 40rpx;
+    border-bottom: 2rpx solid yellowgreen;
+}
+.hotContainer .hotTop{
+    color:#478438;
+}
+.hotContainer .hotTop .iconfont{
+    font-size: 40rpx;
+    color: #c2f3b6;
+}
+.hotList{
+    display: flex;
+    flex-wrap: wrap;
+    background-color:#71ad69;
+    border-radius: 20rpx;
+    margin-top: 16rpx;
+    opacity: .6;
+}
+.hotList .hotItem{
+    width: 50%;
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 33rpx;
+}
+.hotItem .iconImg{
+    width: 35rpx;
+    height: 20rpx;
+    margin-left: 167rpx;
+}
+.hotItem .order{
+    margin:0 20rpx;
+}

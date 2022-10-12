@@ -1,0 +1,70 @@
+<view class="container">
+<!-- 搜索区域 -->
+<view class="header">
+        <image src="/static/images/purpleImage/03.gif"></image>
+        <view class="search" bindtap="toSearch">
+            搜索
+        </view>
+        <image src="/static/images/purpleImage/03.gif"></image>
+    </view>
+  <swiper class="banner" autoplay indicator-dots indicator-color="#fff" indicator-active-color="#9933FF">
+
+    <swiper-item wx:for="{{bannersList}}" wx:key="bannerId">
+      <image src="{{item.pic}}"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/static/images/bizijpg.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/static/images/Music.png"></image>
+    </swiper-item>
+  </swiper>
+  <!-- 导航区域 -->
+  <view class="navContainer">
+    <view class="navItem" bindtap="recommendSong">
+      <text class="iconfont icon-xihuan"></text>
+      <text>推荐</text>
+    </view>
+    <view class="navItem" bindtap="privateMusic">
+      <text class="iconfont icon-gedan"></text>
+      <text>心动</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-paihangbang"></text>
+      <text>无</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-diantai"></text>
+      <text>无</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-airudiantubiaohuizhi-zhuanqu_zhibojian"></text>
+      <text>无</text>
+    </view>
+  </view>
+  <!-- 推荐歌曲区域 -->
+  <view class="recommendContainer">
+    <NavHeader title="无" textName="更多"></NavHeader>
+  </view>
+  <!-- 推荐歌单内容区域 -->
+  <scroll-view class="recommendScroll" enable-flex scroll-x>
+    <view class="scrollItem" wx:for="{{musicsList}}" wx:key="id" wx:if="{{musicsList.length}}">
+      <image src="{{item.picUrl}}"></image>
+      <text>{{item.name}}</text>
+    </view >
+    <view class="hiddenImg">
+      <image src="/static/images/purple.jpeg"></image>
+    </view>
+  </scroll-view>
+  <!-- 排行榜区域 -->
+  <view class="topList">
+    <NavHeader title="无" textName="更多"></NavHeader>
+    <!-- 内容区域 -->
+    <swiper class="topListSwiper" circular next-margin="50rpx" previous-margin="50rpx">
+      <swiper-item wx:for="{{topList}}" wx:key="id" class="swiperItem">
+        <image src="{{item.picUrl}}"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+
+</view>

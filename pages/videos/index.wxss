@@ -1,0 +1,136 @@
+.container{
+    height: 100%;
+    background: linear-gradient(#9933FF,#2d2a28);
+}
+.container .header {
+    display: flex;
+    padding: 10rpx;
+  }
+  .container .header image{
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 40rpx;
+  }
+  .container .header image:last-child{
+      transform:rotate(90deg);
+  }
+  .container .header .search {
+    border: 2rpx solid #000000;
+    /*flex-grow: 可拉伸 flex-shrink： 可压缩 flex-basis: 当前元素的宽度*/
+    /*flex默认值: flex-grow: 0, flex-shrink: 1, flex-basis: auto*/
+    /*flex:1  flex-grow: 1, flex-shrink: 1, flex-basis: 0%*/
+    /*flex:auto  flex-grow: 1, flex-shrink: 1, flex-basis: auto*/
+    /*flex: 1会导致父元素宽度自动为100%*/
+    flex: 1;
+    margin: 0 20rpx;
+    font-size: 26rpx;
+    text-align: center;
+    line-height: 60rpx;
+    color: #000000;
+    border-radius: 20rpx;
+  }
+.navScroll{
+    display: flex;
+    white-space: nowrap;
+    height: 70rpx;
+}
+.navScroll .navItem{
+    padding:0 30rpx;
+    font-size: 32rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+}
+.navScroll .navContent{
+ height: 70rpx;
+ box-sizing: border-box;   
+}
+.navItem .active{
+    border-bottom: 4rpx solid #fff;
+}
+/* 视频播放区域 */
+.videoContent{
+    display: flex;
+    flex-direction: row;
+}
+.videoScroll{
+    margin-top: 10rpx;
+    width: 56%;
+    height: calc(100vh - 152rpx);
+}
+.videoTwoScroll{
+    margin-left: -43rpx;
+    margin-top: 107rpx;
+}
+.videoItem{
+    margin-top: 30rpx;
+}
+.videoTwoScroll video{
+    height: 480rpx !important;
+}
+
+.videoItem .same{
+    width: 60%;
+    height: 545rpx;
+    padding-left: 118rpx;
+    border-radius: 20rpx;
+}
+.videoItem .videoImage{
+    width: 88% !important;
+    padding-left: 0px !important;
+}
+.videoTwoScroll .videoTwoImage{
+    width: 88% !important;
+    padding-left: 0px !important;
+    height: 480rpx !important;
+}
+.videoItem .content{
+    width: 90%;
+    height: 80rpx;
+    font-weight: 500;
+    line-height: 80rpx;
+    max-width: 640rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.videoItem .footer{
+    margin-top: -30rpx;
+    padding: 16rpx 0;
+}
+.footer .avatar{
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+.footer .nickName{
+    font-size: 24rpx;
+    margin-left: 7rpx;
+    vertical-align: middle;
+}
+.footer .btn{
+    display: inline;
+    float: right;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    font-size: 52rpx;
+    margin-top: -10rpx;
+    margin-right: 59rpx;
+    color:#9cd0b6;
+}
+
+/* 隐藏部分 */
+.hiddenContent{
+    position: absolute;
+    width: 520rpx;
+    height: 520rpx;
+    top: 50%;
+    left: 50%;
+    margin-top : -260rpx;
+    margin-left: -260rpx;
+    text-align: center;
+    line-height: 520rpx;
+    border-radius: 20rpx;
+    background-color: aqua;
+}

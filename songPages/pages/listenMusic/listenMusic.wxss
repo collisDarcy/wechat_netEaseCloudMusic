@@ -1,0 +1,157 @@
+.container{
+    height: 100%;
+    background: linear-gradient(#9933FF,#2d2a28);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container .author{
+    font-size: 37rpx;
+    text-shadow: 0 0 4rpx #fff;
+    color:#dae804;
+}
+.container .circle{
+    position: relative;
+    z-index: 5;
+    margin: 10rpx 0;
+    width: 65rpx;
+    height: 65rpx;
+    background-color: #fff;
+    border-radius: 50%;
+}
+.container .needle{
+    position: relative;
+    z-index: 3;
+    top: -40rpx;
+    left: 57rpx;
+    width: 192rpx;
+    height: 274rpx;
+    transform-origin: 33rpx 0;
+    transform:rotate(62deg);
+    transition: transform 2s;
+}
+.needleRotate{
+    transform:rotate(52deg) !important;
+}
+.disContainer {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    width: 520rpx;
+    height: 520rpx;
+    margin-top: -350rpx;
+    margin-left: -260rpx;
+  }
+  .disContainer .foolImg{
+      position: absolute;
+      top:157rpx;
+      left: 405rpx;
+      width: 104rpx;
+      height: 116rpx;
+  }
+.disContainer .disc{
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 40rpx #000000;
+    border-radius: 50%;
+}
+.disContainer .musicImg{
+    position: absolute;
+    top: 95rpx;
+    left: 93rpx;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    width: 341rpx;
+    height: 340rpx;
+    border-radius: 50%;
+    box-shadow: 0 0 60rpx yellowgreen;
+}
+.disAnimation{
+    animation: disMove 5.2s linear infinite;
+    animation-delay: 1.6s;
+}
+@keyframes disMove{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+/* 进度条区域 */
+.progress{
+    position: absolute;
+    display: flex;
+    bottom: 270rpx;
+    width: 640rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+}
+.progress .barControl{
+    position: relative;
+    width: 450rpx;
+    height: 6rpx;
+    background-color:#9578e1;
+    margin: auto;
+}
+.progress text{
+    color:#fff;
+}
+.barControl .truthProgress{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    background-color: #a0d4af;
+}
+.barControl .truthProgress .cirle{
+    position: absolute;
+    right: -12rpx;
+    top:-4rpx;
+    width: 12rpx;
+    height: 12rpx;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+/* 底部控制区 */
+.musicController {
+    position: absolute;
+    bottom: 121rpx;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .musicController text {
+    width: 20%;
+    height: 150rpx;
+    line-height: 150rpx;
+    text-align: center;
+    font-size: 46rpx;
+    color: #979eef;
+  }
+  
+  .musicController text.big {
+    font-size: 70rpx;
+  }
+  /* 隐藏区域 */
+  .photoContent{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20rpx;
+}
+.photoContent .photo{
+    width: 300rpx;
+    height: 300rpx;
+    margin-top: 20rpx;
+}
+.photoContent .photo image{
+    width: 100%;
+    height: 100%;
+    border-radius: 40rpx;
+}

@@ -1,0 +1,13 @@
+/* components/NavHeader.wxss */
+/* 推荐歌曲 */
+
+.header {
+    padding-bottom: 4rpx;
+}
+
+.header .more {
+    float: right;
+    border-radius: 20rpx;
+    border: 1px solid #333;
+    padding: 10rpx 20rpx;
+}

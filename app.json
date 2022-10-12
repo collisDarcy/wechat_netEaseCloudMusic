@@ -1,0 +1,61 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/searchMusic/searchMusic",
+        "pages/privateLove/privateLove",
+        "pages/videos/index",
+        "pages/personal/index"        
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#9933FF",
+        "navigationBarTitleText": "LUMP IN MY THORAT",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "color": "#333",
+        "selectedColor": "#C7BCD2",
+        "backgroundColor": "#9933FF",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "主页",
+                "iconPath": "/static/images/tabs/index_select.png",
+                "selectedIconPath": "/static/images/tabs/index.png"
+            },
+            {
+                "pagePath": "pages/videos/index",
+                "text": "云村",
+                "iconPath": "/static/images/tabs/video_select.png",
+                "selectedIconPath": "/static/images/tabs/video.png"
+            },
+            {
+                "pagePath": "pages/personal/index",
+                "text": "我的",
+                "iconPath": "/static/images/tabs/personal_select.png",
+                "selectedIconPath": "/static/images/tabs/personal.png"
+            }
+        ]
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json",
+    "requiredBackgroundModes": [
+        "audio"
+    ],
+    "subPackages": [
+        {
+            "root": "songPages",
+            "pages": [
+             "pages/commendSong/commendSong",
+             "pages/listenMusic/listenMusic"   
+            ]
+        },
+        {
+            "root": "LoginPages",
+            "pages":[
+                "pages/login/login",
+                "pages/captchaPage/captchaPage"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,54 @@
+<view class="container" data-id="index" wx:if="{{privateMusicList.length}}">
+    <view class="author">{{privateMusicList.length===0 ? 'Internet Error' : privateMusicList[index].name}}</view>
+     <view class="circle"></view>
+    <image class="needle {{isPlay ? 'needleRotate ' : ''}}" src="/static/images/song/needle.png"></image>
+    <view class="disContainer {{isPlay ? 'disAnimation':''}}">
+        <image class="disc" src="/static/images/song/disc.png"></image>
+        <image src="{{privateMusicList.length===0 ? '/static/images/bizijpg.jpg' : privateMusicList[index].album.picUrl}}" class="musicImg"></image>
+    </view>
+    <!-- 进度条区域 -->
+    <view class="progress">
+        <text>{{currentTime}}</text>
+        <view class="barControl">
+            <view class="truthProgress" style="width: {{currentWidth+'rpx'}};">
+                <view class="cirle"></view>
+            </view>
+        </view>
+        <text>{{durationTime}}</text>
+    </view>
+    <!-- 底部播放按钮 -->
+    <view class="musicController">
+        <text class="iconfont icon-xunhuanbofang"></text>
+        <text class="iconfont icon-icon-1" id="pre" bindtap="switchMusic"></text>
+        <text class="big iconfont {{isPlay? 'icon-zanting' : 'icon-weibiaoti--'}}" bindtap="handleMusicPlay"></text>
+        <text class="iconfont icon-icon-" id="next" bindtap="switchMusic"></text>
+        <text class="iconfont icon-24gf-playlistHeart4"></text>
+    </view>
+</view>
+<view wx:else class="photoContent">
+    <view>精美图片</view>
+    <view class="photo">
+    <image src="/static/images/bizijpg.jpg"></image>
+    </view>
+    <view class="photo">
+    <image src="/static/images/PurpleBg.jpg"></image>
+    </view>
+    <view class="photo">
+    <image src="/static/images/bizijpg.jpg"></image>
+    </view>
+    <view class="photo">
+    <image src="/static/images/PurpleBg.jpg"></image>
+    </view>
+    <view class="photo">
+    <image src="/static/images/bizijpg.jpg"></image>
+    </view>
+    <view class="photo">
+    <image src="/static/images/Music.png"></image>
+    </view>
+    <view class="photo">
+    <image src="/static/images/purple.jpeg"></image>
+    </view>
+    <view class="photo">
+    <image src="/static/images/PurpleBg.jpg"></image>
+    </view>
+</view>

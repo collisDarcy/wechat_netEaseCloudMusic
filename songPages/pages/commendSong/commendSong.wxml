@@ -1,0 +1,32 @@
+<view class="container">
+    <view class="header">
+        <image src="/static/images/purpleImage/03.jpg"></image>
+        <view class="date">
+            <text>{{year}}/</text>
+            <text class="month">0{{month}}/</text>
+            <text class="day">0{{day}}</text>
+        </view>
+    </view>
+    <view class="listHeader">
+        <text>播放全部</text>
+        <image src="/static/images/purpleImage/02.gif"></image>
+        <text class="changeMore">更多></text>
+    </view>
+    <!-- 内容区 -->
+    <scroll-view class="listScroll" scroll-y>
+        <view class="scrollItem" wx:for="{{ recommendList}}" wx:key="id"
+        bindtap="handleListen" hover-class="clickItem" 
+        data-index="{{index}}" data-song="{{item}}"
+        >
+            <image src="{{item.al.picUrl}}"></image>
+            <view class="musicInfo">
+                <text class="musicName">{{item.name}}</text>
+                <text class="authorName">{{item.ar[0].name}}</text>
+            </view>
+            <text class="iconfont icon-24gf-playlistHeart4"></text>
+            <text class="iconfont icon-diantai openMusic"></text>
+        </view>
+    </scroll-view>
+
+
+</view>

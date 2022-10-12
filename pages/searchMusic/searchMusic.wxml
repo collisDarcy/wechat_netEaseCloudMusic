@@ -1,0 +1,65 @@
+<view class="container" style="background-image: url('/static/images/purpleImage/qianse.jpg');background-repeat: no-repeat; background-attachment: fixed;background-size: 100% 100%;">
+    <!-- 搜索区域 -->
+    <view class="header">
+        <text class="iconfont icon-gedan "></text>
+        <view class="searchInput">
+            <text class="iconfont icon-soushuo searchIcon"></text>
+            <input type="search" value="{{ getInputData}}" placeholder="{{placeholderDefault}}" placeholder-class="placeholder" bindinput="handleInputChange" />
+            <text class="iconfont icon-quxiao quxiao" bindtap="clearContent" hidden="{{!getInputData}}"></text>
+        </view>
+        <text class="cancle" bindtap="clearContent">取消</text>
+    </view>
+     <!-- 搜索内容展示 -->
+    <block wx:if="{{getInputData}}">
+        <view class="showSearchContent">
+            <view class="searchContent">
+                <text>单曲播放</text>
+                <text class="iconfont icon-24gf-playlistHeart4"></text>
+            </view>
+            <view class="searchList">
+                <view class="searchItem" wx:for="{{searchList}}" wx:key="id" hover-class="clickItem" bindtap="handleListen" data-index="{{index}}" data-song="{{item}}">
+                    <view class="songLeft">
+                        <text class="content">{{item.name}}</text>
+                        <view class="songerContent">
+                            <text class="originSong">原唱:</text>
+                            <text class="songer">{{item.ar[0].name}}</text>
+                        </view>
+                    </view>
+                    <view class="songRight">
+                        <text class="iconfont icon-24gf-playlistHeart4"></text>
+                        <text class="iconfont icon-diantai openMusic"></text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </block>
+    <block wx:else>
+       <view class="hot-history-content">
+        <!-- 搜索历史展示区域 -->
+        <view class="historyContent" wx:if="{{historyList.length}}">
+            <view class="title">
+            <text>历史</text>
+            <text class="iconfont icon-_shanchu delete" bindtap="deleteHistory"></text>
+            </view>
+            <view class="history" wx:for="{{historyList}}" wx:key="item">
+                <view class="historyItem">{{item}}</view>
+            </view>
+        </view>
+        <!-- 热搜榜区域 -->
+        <view class="hotContainer">
+            <view class="hotTop">
+                <view class="hotTitle">热搜榜</view>
+                <view class="iconfont icon-gedan1"></view>
+            </view>
+            <view class="hotList">
+                <view class="hotItem" wx:for="{{hotList}}" wx:key="searchWord">
+                    <text class="order">{{index+1}}</text>
+                    <text class="">{{item.searchWord}}</text>
+                    <image class="iconImg" wx:if="{{item.iconUrl}}" src="{{item.iconUrl}}"></image>
+                </view>
+            </view>
+
+        </view>
+       </view>
+    </block>
+</view>
